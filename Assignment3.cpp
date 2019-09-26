@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <stack>
+#include <queue>
 #include "Postfix_Evaluator.h"
 #include "Syntax_Error.h"
 using namespace std;
@@ -34,6 +35,16 @@ void WordReversal(string input){
 	}
 }
 
+//Question 8
+/*Write a new queue function called move_to_rear that
+moves the element currently at the front of the queue to the rear of the queue. The
+element that was second in line will be the new front element. Do this using
+functions push, front, and pop.*/
+//Copy the front item to the rear. Remove the front item.
+void move_to_rear(queue<int> &input) {
+	input.push(input.front());
+	input.pop();
+}
 
 int main() {
 	
